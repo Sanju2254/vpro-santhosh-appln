@@ -10,7 +10,8 @@ pipeline {
 
         stage('Clone Repository') {
             steps {
-                git https://github.com/Sanju2254/vpro-santhosh-appln.git'            }
+                git 'https://github.com/fullstacktraning/vpro-react-appln.git'
+            }
         }
 
         stage('Install Dependencies') {
