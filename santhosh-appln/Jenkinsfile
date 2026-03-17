@@ -10,7 +10,7 @@ pipeline {
 
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/fullstacktraning/vpro-react-appln.git'
+                git 'https://github.com/fullstacktraning/santhosh-react-appln.git'
             }
         }
 
