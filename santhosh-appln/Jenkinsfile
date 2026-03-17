@@ -8,9 +8,9 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/Sanju2254/vpro-santhosh-appln.git'
-            }
-        }
+                git branch: 'main', url: 'https://github.com/Sanju2254/vpro-santhosh-appln.git'
+         }
+         }
 
         stage('Install Dependencies') {
             steps {
