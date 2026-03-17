@@ -1,5 +1,4 @@
 pipeline {
-
     agent any
 
     tools {
@@ -7,10 +6,9 @@ pipeline {
     }
 
     stages {
-
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/Sanju2254/vpro-santhosh-appln.git'
+                git branch: 'main', url: 'https://github.com/Sanju2254/vpro-santhosh-appln.git'
             }
         }
 
@@ -43,6 +41,5 @@ pipeline {
                 sh 'docker run -d -p 3000:3000 --name vite-react-container vite-react-app'
             }
         }
-
     }
 }
