@@ -38,9 +38,10 @@ pipeline {
             }
         }
 
-        stage('Run Container') {
+       stage('Run Container') {
     steps {
-        sh 'docker run -d -p 80:3000 -p 3000:3000 -p 8080:3000 --name vite-react-container vite-react-app'
+        sh 'docker rm -f vite-react-container || true'
+        sh 'docker run -d -p 80:3000 --name vite-react-container vite-react-app'
     }
 }
 
